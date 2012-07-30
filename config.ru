@@ -15,9 +15,9 @@ if ENV['RACK_ENV'] == 'production'
 end
 
 use Rack::TryStatic, 
-    :root => 'public',
-    :urls => %w[/],
-    :try => ['index.html']
+  :root => 'public',
+  :urls => %w[/],
+  :try => ['index.html']
 
 run lambda { |env|
   [
