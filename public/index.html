@@ -1,26 +1,116 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Microcash | The Digital Currency</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/landing.css" />
-		<meta name="description" content="Microcash allows anonymous and lightning fast monetary transactions on a decentralized network." />
-	</head>
-	<body>
-		<header>
-			<a id="logo" href="/"><img src="images/pitch-logo.png" alt="Microcash" /></a>
-		</header>
-		<div id="page">
-			<div class="container">
-				<article id="main">
-					<p>
-						Microcash is a <strong>micropayment currency</strong> operated on a decentralized network to offer fast, low fee, and anonymous monetary transactions. The network's decentralized nature removes the need for a central authority.
-					</p>
-					<p>
-						<strong>Funds cannot be frozen and there is no government control. Microcash is the future's currency.</strong>
-					</p>
-				</article>
-				<p id="notice">The Microcash beta will be out soon. Keep an eye on the <a href="http://forums.microcash.org">forum</a> for news. Meanwhile, click <a href="http://webchat.freenode.net/?channels=#microcash">here to have a chat with the developers and supporters</a> of #microcash on freenode.</p>
-			</div>
-		</div>
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>        
+        <title>MicroCash - The fastest and most secure digital currency</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="MicroCash" />
+        <meta name="keywords" content="microcash, digital currency, ecurrency, cryptocurrency" />
+        <link rel="shortcut icon" href="favicon.png" />
+        <link href="site.css" rel="stylesheet" type="text/css"/>
+        <link href="bebas.css" media="screen" rel="stylesheet" type="text/css" />
+        
+</head>
+<body>
+
+<div id="d1" class="debree" style="background:url(dollar.png);width:84px;height:150px;background-size:100%;"></div>
+<div id="d2" class="debree" style="background:url(dollar.png);width:56px;height:100px;background-size:100%;"></div>
+<div id="d3" class="debree" style="background:url(coin.png);width:100px;height:100px;background-size:100%;"></div>
+<div id="outer">
+<div id="rocket"></div>
+<div id="maincontent">
+<div id="logo"></div>
+<div class="point">Send money instantly</div>
+<div class="point">No frozen accounts</div>
+<div class="point">No chargebacks</div>
+<div class="point">Anonymous if desired</div>
+<div class="point">No signup necessary</div>
+<div class="point">Earn cash with your computer</div>
+<div style="clear:both;height:20px;"></div>
+
+<a class="mainlink" href="http://forums.microcash.org">Download</a>
+<a class="mainlink" href="http://forums.microcash.org">Learn More</a>
+<a class="mainlink" href="http://forums.microcash.org">Forum</a>
+
+
+</div></div>
+
+<script type="text/javascript">
+        var dirx=0;
+        var moveposx=0;
+        var diry=0;
+        var moveposy=0;
+        function rocketMove()
+        {
+            rocket.style.marginLeft = (600-moveposx)+'px'; 
+            rocket.style.marginTop = (moveposy)+'px';             
+            if(dirx==0)  moveposx++;
+            else        moveposx--;
+            if(moveposx>=20) dirx=1;
+            else if(moveposx<=0) dirx=0;
+
+            if(diry==0)  moveposy+=1;
+            else        moveposy-=1.5;
+            if(moveposy>=30) diry=1;
+            else if(moveposy<=0) diry=0;
+
+            setTimeout(rocketMove,50); // call doMove() in 20 msec
+
+        }
+
+
+        var p1x=100;var p1y=-10;var p1z=10;
+        function p1move()
+        {
+            d1.style.marginLeft = (p1x)+'%'; 
+            d1.style.marginTop = (p1y)+'%';                         
+            p1y++;p1x--;
+            if(p1y>110)
+            {
+                if(Math.round(Math.random() * 100) < 50) d1.style.zIndex = -1;
+                else d1.style.zIndex = -2;
+                p1x = 40+Math.round(Math.random() * 60);
+                p1y=-10;
+                p1z = 10+Math.round(Math.random() * 20);
+            }
+            setTimeout(p1move,p1z); // call doMove() in 20 msec
+
+        }
+
+        var p2x=80;var p2y=-10;var p2z=20;
+        function p2move()
+        {
+            d2.style.marginLeft = (p2x)+'%';
+            d2.style.marginTop = (p2y)+'%';
+            p2y++;p2x--;
+            if(p2y>110)
+            {
+                p2x = 40+Math.round(Math.random() * 60);
+                p2y=-10;
+                p2z = 10+Math.round(Math.random() * 20);
+            }
+            setTimeout(p2move,p2z);
+
+        }
+        var p3x=60;var p3y=-10;var p3z=40;
+        function p3move()
+        {
+            d3.style.marginLeft = (p3x)+'%';
+            d3.style.marginTop = (p3y)+'%';
+            p3y++;p3x--;
+            if(p3y>110)
+            {
+                p3x = 40+Math.round(Math.random() * 60);
+                p3y=-10;
+                p3z = 10+Math.round(Math.random() * 20);
+            }
+            setTimeout(p3move,p3z);
+
+        }
+        setTimeout(rocketMove,1);        
+        setTimeout(p1move,1);
+        setTimeout(p2move,150);
+        setTimeout(p3move,400);
+        </script>
+
+</body>
 </html>

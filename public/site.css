@@ -1,0 +1,86 @@
+
+
+body
+{    
+    background: url(bg.jpg);
+    background-size: 100%;
+    font-family: BebasNeueRegular;
+}
+
+#outer
+{
+    width:1200px;
+    overflow:auto;
+    margin:0px auto 0px auto;
+    z-index:-2;
+}
+    
+#maincontent
+{
+    width:1200px;
+    z-index:1;
+    
+    overflow:auto;    
+    margin:0px auto 0px auto;
+    
+}
+
+#logo
+{
+    background: url(logo.png);
+    width:800px;
+    height:153px;
+}
+
+.point
+{
+    background: url(circle.png) no-repeat;
+    height:60px;
+    padding-left:55px;    
+    line-height:60px;
+    font-size:50px;
+    color: #FFFFFF;
+    float:left;
+    clear:left;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.mainlink
+{
+    display:block;
+    -moz-box-shadow: 0px 0px 10px #fff;
+    -webkit-box-shadow: 0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    float:left;
+    width:390px;
+    height:100px;
+    background:url(bg2.png);
+    margin:5px;
+    font-size:60px;
+    line-height:100px;
+    text-align:center;
+    color:#FFFFFF;
+}
+
+.mainlink:hover
+{
+    background:url(bg3.png);
+}
+
+#rocket
+{
+    margin-left:600px;
+    position:absolute;        
+    background:url(rocket.png);
+    width:600px;
+    height:600px;    
+    z-index:inherit;
+}
+
+.debree
+{
+    position:fixed;            
+    z-index:-2;    
+}
