@@ -12,13 +12,11 @@ body
     width:1200px;
     overflow:auto;
     margin:0px auto 0px auto;
-    z-index:-2;
 }
     
 #maincontent
 {
-    width:1200px;
-    z-index:1;
+    width:1200px;    
     
     overflow:auto;    
     margin:0px auto 0px auto;
@@ -46,7 +44,7 @@ body
 }
 
 .mainlink
-{
+{    
     display:block;
     -moz-box-shadow: 0px 0px 10px #fff;
     -webkit-box-shadow: 0px 0px 10px #fff;
@@ -62,6 +60,7 @@ body
     line-height:100px;
     text-align:center;
     color:#FFFFFF;
+    z-index:1;
 }
 
 .mainlink:hover
@@ -76,7 +75,7 @@ body
     background:url(rocket.png);
     width:600px;
     height:600px;    
-    z-index:inherit;
+    z-index:-2;
 }
 
 .debree
