@@ -39,6 +39,7 @@
         var moveposx=0;
         var diry=0;
         var moveposy=0;
+        var rocketflame=0;
         function rocketMove()
         {
             rocket.style.marginLeft = (600-moveposx)+'px'; 
@@ -52,6 +53,11 @@
             else        moveposy-=1.5;
             if(moveposy>=30) diry=1;
             else if(moveposy<=0) diry=0;
+
+            if(rocketflame) rocket.style.backgroundImage = "url(rocket2.png)";
+            else  rocket.style.backgroundImage = "url(rocket.png)";
+
+            rocketflame = 1-rocketflame;
 
             setTimeout(rocketMove,50); // call doMove() in 20 msec
 
